@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreHub - Curated Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Glassmorphic Header -->
+    <header class="top-header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <span class="brand-title">StoreHub</span>
+            </div>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-pill-btn">
+                    <span class="theme-icon">☀️</span>
+                    <span>Theme</span>
+                </button>
+                <button class="icon-btn" aria-label="Quick Actions">♣</button>
+                <button class="add-product-btn">+ Add product</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-section">
+                <span class="category-badge">CURATED MARKETPLACE</span>
+                <h1 class="hero-title">Find your next<br>favorite.</h1>
+            </div>
+
+            <!-- Discover Trending Banner -->
+            <div class="trending-card">
+                <div class="trending-info">
+                    <h2>Discover trending products</h2>
+                    <p>Fresh picks from the categories people are loving this week.</p>
+                </div>
+                
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search by title or category...">
+                </div>
+            </div>
+
+            <!-- Modern Card Stats Counter -->
+            <div class="stats-counter-card">
+                <div class="stat-item">
+                    <span class="stat-label">Total Products</span>
+                    <span id="totalProductsCount" class="stat-value highlight">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Showing Now</span>
+                    <span id="showingCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Remaining</span>
+                    <span id="remainingCount" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- Loading & Error -->
+            <div id="loading">Loading products...</div>
+            <div id="error"></div>
+
+            <!-- Product Cards Container -->
+            <div id="productContainer" class="products"></div>
+
+            <!-- Sliding Pagination -->
+            <div id="pagination" class="pagination"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
